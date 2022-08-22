@@ -18,5 +18,5 @@
     int main(){
     int arr[4]={11,13,15,17};
     cout<<pivot(arr,4);
-return 0;
+return 0;  
 }

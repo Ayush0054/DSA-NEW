@@ -18,7 +18,7 @@
 
          //*****************************************strings
 string str;
-// cin>>str;
+ cin>>str;
 getline(cin,str);
 cout<<"str is "<<str<<endl;
  
