@@ -1,2 +1,2 @@
-
-void print(Node* head){
+ head=reverse(head);
+print(head);

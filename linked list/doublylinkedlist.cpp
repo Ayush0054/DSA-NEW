@@ -119,6 +119,18 @@ void deletion(Node* &head, Node* &tail, int index){
     delete curr;
 
 } 
+Node* reverse(Node* head){
+  if(head==NULL || head ->next == NULL){
+    head->prev = NULL;
+    return head;
+  }          
+  Node* newhead = reverse(head-> next);
+  head -> next -> next = head;
+  head -> prev = head -> next;
+  head -> next = NULL;
+  return newhead;
+}
+
     int main(){
     // Node* node1 = new Node(10);
     Node* head =  NULL;
@@ -126,14 +138,16 @@ void deletion(Node* &head, Node* &tail, int index){
   
    cout<<"length "<< getlength(head)<<endl;
    insertathead(head,tail,11);
-   print(head);
+
    insertattail(head,tail,14);
-   print(head);
-   InsertAtMiddle(head,tail,1,33);
+ 
+   InsertAtMiddle(head,tail,1,12);
    print(head);
 //    deletion(head,tail,1);
 //    print(head);
 //    deletion(head,tail,1);
 //    print(head);
+ head=reverse(head);
+ print(head);
 return 0;
 }

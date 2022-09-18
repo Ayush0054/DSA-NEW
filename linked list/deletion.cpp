@@ -76,7 +76,7 @@ void deletenode(int position,Node* &head,Node* &tail){
     }
     else
     {
-        //deleting any middle or lasat node
+        //deleting any middle or last node
          Node* curr = head;
          Node* prev = NULL;
          
